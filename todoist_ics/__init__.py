@@ -43,7 +43,7 @@ def return_ics(ics_token):
                     pass
 
             task_event = Event()
-            task_event.name = task['content']
+            task_event.name = ("🗹" if task['checked'] else "☐") + " " + task['content']
             task_event.begin = datetime
             task_event.duration = duration
             task_event.description = task['description']
