@@ -11,17 +11,17 @@ python-dateutil = ">=2.7.0"
 
 [[package]]
 name = "attrs"
-version = "22.1.0"
+version = "21.4.0"
 description = "Classes Without Boilerplate"
 category = "main"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [package.extras]
-dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "zope.interface", "furo", "sphinx", "sphinx-notfound-page", "pre-commit", "cloudpickle"]
+dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface", "furo", "sphinx", "sphinx-notfound-page", "pre-commit", "cloudpickle"]
 docs = ["furo", "sphinx", "zope.interface", "sphinx-notfound-page"]
-tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "zope.interface", "cloudpickle"]
-tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "cloudpickle"]
+tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface", "cloudpickle"]
+tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "cloudpickle"]
 
 [[package]]
 name = "bottle"
@@ -152,17 +152,6 @@ python-versions = ">=3.8"
 future-regex = ["regex"]
 
 [[package]]
-name = "todoist-python"
-version = "8.1.3"
-description = "todoist-python - The official Todoist Python API library"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-requests = "*"
-
-[[package]]
 name = "urllib3"
 version = "1.26.11"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -178,11 +167,14 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "9c6ef8f1d0619ca262c0caa2bf05c2e30e43ed6c0509ebfbc8322142954f4fb8"
+content-hash = "95ed11e9a9b2046d19c346d0b1b1b75f37f29f29d542bfb76df7e4355b89ea77"
 
 [metadata.files]
 arrow = []
-attrs = []
+attrs = [
+    {file = "attrs-21.4.0-py2.py3-none-any.whl", hash = "sha256:2d27e3784d7a565d36ab851fe94887c5eccd6a463168875832a1be79c82828b4"},
+    {file = "attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
+]
 bottle = []
 certifi = []
 charset-normalizer = []
@@ -201,5 +193,4 @@ pytz = []
 requests = []
 six = []
 tatsu = []
-todoist-python = []
 urllib3 = []
